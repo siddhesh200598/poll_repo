@@ -1,6 +1,39 @@
-# Information about how i build this app
+# Poll Application
+## Features
 
+### Poll Widget Component
 
+- Created a reusable `PollWidget` component that displays a question and a set of options for voting.
+- The component accepts data as props to show different questions and options.
+
+### Data Management
+
+- Poll data is stored in a constant file and is fetched from there.
+- Multiple `PollWidget` components are rendered with different sets of data.
+
+### Voting and Local Storage
+
+- Votes are stored in local storage, allowing the application to retain vote counts even after the page is refreshed.
+- Users can vote again after refreshing the page.
+
+### Unit Testing
+
+- Implemented unit tests for the `PollWidget` component to ensure proper functionality.
+- Used `@testing-library/react` for writing test cases.
+
+## Improvements and Future Enhancements
+
+- Improve the animation for the voting process to make it more engaging.
+- Enhance the user interface for better user experience.
+- Add more robust error handling and validation.
+
+## Usage
+
+You can add new poll questions and options by modifying the `constant.js` file where the poll data is stored. Each poll widget can be reused and configured with different data sets.
+
+### Example Usage
+
+In `App.js`, two `PollWidget` components are rendered with different data:
 
 
 # Getting Started with Create React App
