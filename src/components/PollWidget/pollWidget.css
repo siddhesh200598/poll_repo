@@ -1,0 +1,117 @@
+/* PollWidget.css */
+
+.poll-widget {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 50px auto;
+    background: linear-gradient(145deg, #f9f9f9, #e3e3e3);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.animate-pulse {
+    -webkit-animation: pulse 1s 1;
+    animation: pulse 1s 3;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.poll-widget h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color: #333;
+}
+
+.poll-widget .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.poll-widget .option-button {
+    padding: 15px 20px;
+    background-color: #765fe3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 1em;
+}
+
+.poll-widget .option-button:hover {
+    background-color: #4d4476;
+    transform: scale(1.05);
+}
+
+.poll-widget .thank-you-message {
+    font-size: 1.2em;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.poll-widget .results {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.poll-widget .result {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.poll-widget .option-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.poll-widget .vote-count {
+    color: #555;
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05)
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05,1.05,1.05);
+        transform: scale3d(1.05,1.05,1.05)
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .poll-widget {
+        width: -webkit-fill-available;
+        margin: 20px auto;
+    }
+}
